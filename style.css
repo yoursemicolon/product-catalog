@@ -43,7 +43,7 @@ nav ul li a:before {
     transition: all .5s;
 }
 nav ul li a:hover {
-    color: green;
+    color: #FF523B;
 }
 
 a {
