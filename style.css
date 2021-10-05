@@ -29,11 +29,45 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin-right: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav ul li:hover {
+    color: white;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+nav ul li a:hover {
+    color: green;
 }
 
 a {
     text-decoration: none;
     color: #555;
+}
+/* stroke */
+nav.stroke ul li a {
+    position: relative;
+}
+nav.stroke ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+}
+nav.stroke ul li a:hover:after {
+    width: 100%;
 }
 
 .col-2 p {
@@ -212,7 +246,7 @@ small {
 }
 
 .testimonial .col-3 h3 {
-    font-weight: 600;
+    font-weight: 500;
     color: #555;
     font-size: 16px;
 }
@@ -332,5 +366,15 @@ ul {
     .menu-icon {
         display: block;
         cursor: pointer;
+    }
+}
+
+/* media query for less than 600 screen size */
+@media only screen and (max-width: 600px) {
+    .row {
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4 {
+        flex-basis: 100%;
     }
 }
